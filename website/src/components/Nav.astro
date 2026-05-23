@@ -1,0 +1,58 @@
+---
+import type { Dictionary } from '@/i18n/zh';
+import { GITHUB_URL } from '@/lib/constants';
+
+interface Props {
+  dict: Dictionary;
+}
+
+const { dict } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur dark:border-neutral-800/60 dark:bg-neutral-950/80">
+  <div class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+    <a href="#top" class="flex items-center gap-2">
+      <img src="/icon-32.png" alt="" width="20" height="20" class="rounded" />
+      <span class="text-sm font-semibold tracking-tight">{dict.brand}</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm text-neutral-600 sm:flex dark:text-neutral-400">
+      <a href="#features" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.features}</a>
+      <a href="#install" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.install}</a>
+      <a href="#faq" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.faq}</a>
+      <a href={GITHUB_URL} target="_blank" rel="noopener" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.github}</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={dict.footer.switchHref}
+        class="text-xs text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+      >
+        {dict.footer.switchLang}
+      </a>
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle theme"
+        class="grid h-8 w-8 place-items-center rounded-md border border-neutral-200 text-neutral-500 hover:text-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-100"
+      >
+        <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const isDark = root.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>

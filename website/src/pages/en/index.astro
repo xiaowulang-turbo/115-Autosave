@@ -1,0 +1,26 @@
+---
+import Base from '@/layouts/Base.astro';
+import Nav from '@/components/Nav.astro';
+import Hero from '@/components/Hero.astro';
+import Features from '@/components/Features.astro';
+import Install from '@/components/Install.astro';
+import Faq from '@/components/Faq.astro';
+import Footer from '@/components/Footer.astro';
+import { useDict } from '@/i18n';
+
+const dict = useDict('en');
+const title = `${dict.brand} · Auto save for 115 share pages`;
+const description =
+  'A Chrome extension and userscript that auto-saves 115 share links: submits the access code, triggers the save and confirms the folder in one go.';
+---
+
+<Base title={title} description={description} locale="en">
+  <Nav dict={dict} />
+  <main>
+    <Hero dict={dict} />
+    <Features dict={dict} />
+    <Install dict={dict} />
+    <Faq dict={dict} />
+  </main>
+  <Footer dict={dict} />
+</Base>

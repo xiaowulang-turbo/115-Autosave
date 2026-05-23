@@ -1,0 +1,26 @@
+---
+import type { Dictionary } from '@/i18n/zh';
+import { GITHUB_URL, GREASY_FORK_URL, SITE_NAME } from '@/lib/constants';
+
+interface Props {
+  dict: Dictionary;
+}
+
+const { dict } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-neutral-200 dark:border-neutral-800">
+  <div class="mx-auto flex max-w-5xl flex-col items-start justify-between gap-4 px-4 py-8 text-sm text-neutral-500 sm:flex-row sm:items-center sm:px-6 dark:text-neutral-500">
+    <div>
+      <p>&copy; {year} {SITE_NAME} · {dict.footer.license}</p>
+      <p class="mt-1 text-xs">{dict.footer.disclaimer}</p>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href={dict.footer.privacyHref} class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.footer.privacy}</a>
+      <a href={GITHUB_URL} target="_blank" rel="noopener" class="hover:text-neutral-900 dark:hover:text-neutral-100">GitHub</a>
+      <a href={GREASY_FORK_URL} target="_blank" rel="noopener" class="hover:text-neutral-900 dark:hover:text-neutral-100">Greasy Fork</a>
+      <a href={dict.footer.switchHref} class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.footer.switchLang}</a>
+    </div>
+  </div>
+</footer>

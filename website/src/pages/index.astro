@@ -1,0 +1,25 @@
+---
+import Base from '@/layouts/Base.astro';
+import Nav from '@/components/Nav.astro';
+import Hero from '@/components/Hero.astro';
+import Features from '@/components/Features.astro';
+import Install from '@/components/Install.astro';
+import Faq from '@/components/Faq.astro';
+import Footer from '@/components/Footer.astro';
+import { useDict } from '@/i18n';
+
+const dict = useDict('zh');
+const title = `${dict.brand} · 115 网盘自动转存`;
+const description = '115 网盘分享页自动转存的 Chrome 扩展与油猴脚本：输入访问码、点击转存、确认目录，三步合一。';
+---
+
+<Base title={title} description={description} locale="zh">
+  <Nav dict={dict} />
+  <main>
+    <Hero dict={dict} />
+    <Features dict={dict} />
+    <Install dict={dict} />
+    <Faq dict={dict} />
+  </main>
+  <Footer dict={dict} />
+</Base>

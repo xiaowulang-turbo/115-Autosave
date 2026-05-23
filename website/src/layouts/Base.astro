@@ -1,0 +1,40 @@
+---
+import '@/styles/global.css';
+import type { Locale } from '@/i18n';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+}
+
+const { title, description, locale } = Astro.props;
+const htmlLang = locale === 'zh' ? 'zh-CN' : 'en';
+---
+
+<!doctype html>
+<html lang={htmlLang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/icon-128.png" />
+    <link rel="alternate" hreflang="zh-CN" href="/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/icon-128.png" />
+    <title>{title}</title>
+    <script is:inline>
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (stored !== 'light' && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>
