@@ -1,0 +1,40 @@
+115 Auto Save streamlines the "enter access code → save → confirm folder" flow on 115 Cloud share pages into a single automatic action — open the link, walk away.
+
+—— Core Features ——
+
+• Auto-submit access code: clicks the "OK" button right after the page loads
+• One-click save: clicks the "Save" button to open the folder picker
+• Auto-confirm folder: clicks "Save here" to complete the transfer
+• Smart per-step delays: each step is independently configurable, works on any network speed
+
+—— Personalization ——
+
+• Bilingual UI (Chinese / English, auto-detect or manual switch)
+• Light / Dark theme (follow system or set manually)
+• Toggle auto-save on/off (extension stays installed but stays quiet)
+• Fine-tune all three step delays in the settings panel
+
+—— Privacy & Security ——
+
+• Zero data collection: all actions run locally inside your browser
+• Only active on 115cdn.com share pages — never reads any other website
+• Only requests the storage permission (to persist your preferences)
+• Fully open source for review: https://github.com/xiaowulang-turbo/115-Autosave
+
+—— Who It's For ——
+
+• Anyone who regularly receives 115 Cloud share links
+• Users tired of clicking three buttons every single time
+• People processing multiple share links in batches
+
+—— Website ——
+
+https://115-auto-save.vercel.app
+
+—— Privacy Policy ——
+
+https://115-auto-save.vercel.app/en/privacy/
+
+—— Disclaimer ——
+
+For educational and personal use only. Comply with the 115 Cloud terms of service. The developer is not liable for any issues arising from the use of this extension.

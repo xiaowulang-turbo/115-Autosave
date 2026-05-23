@@ -1,0 +1,35 @@
+{
+  "name": "115-auto-save-extension",
+  "description": "115 网盘分享页自动转存的 Chrome 扩展",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:tsc": "vue-tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "vue": "^3.5.34"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.42",
+    "@vue/eslint-config-typescript": "^14.7.0",
+    "@wxt-dev/i18n": "^0.2.5",
+    "@wxt-dev/module-vue": "^1.0.3",
+    "eslint": "^9.18.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "typescript": "^5.7.3",
+    "vue-eslint-parser": "^10.3.0",
+    "vue-tsc": "^3.0.0",
+    "wxt": "^0.20.26"
+  }
+}

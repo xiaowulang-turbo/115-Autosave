@@ -1,0 +1,50 @@
+{
+  "appName": {
+    "message": "115 转存助手",
+    "description": "扩展名称（Chrome Web Store 与扩展管理页展示）"
+  },
+  "appDesc": {
+    "message": "115 网盘分享页一键自动转存：自动提交访问码、点击转存、确认目录。",
+    "description": "扩展描述"
+  },
+
+  "welcomeTitle": { "message": "欢迎使用 115 转存助手" },
+  "welcomeSubtitle": { "message": "115 网盘分享页自动转存，三步合一。" },
+  "welcomeIntro": { "message": "安装完成后，打开任意 115 分享链接，扩展将自动完成访问码提交、触发转存与确认操作。" },
+
+  "stepListTitle": { "message": "工作流程" },
+  "step1Title": { "message": "提交访问码" },
+  "step1Desc": { "message": "页面加载后自动点击\"确定\"按钮提交访问码。" },
+  "step2Title": { "message": "一键转存" },
+  "step2Desc": { "message": "自动点击\"转存\"按钮，打开转存对话框。" },
+  "step3Title": { "message": "确认目录" },
+  "step3Desc": { "message": "自动点击\"转存到此\"按钮，完成转存。" },
+
+  "openSettings": { "message": "打开设置" },
+  "openWebsite": { "message": "访问官网" },
+
+  "settingsTitle": { "message": "设置" },
+  "settingsDesc": { "message": "调整自动转存行为、外观与语言。" },
+
+  "groupBehavior": { "message": "行为" },
+  "settingsEnabled": { "message": "启用自动转存" },
+  "settingsEnabledDesc": { "message": "关闭后扩展不会自动点击任何按钮。" },
+  "delayBeforeSubmit": { "message": "提交访问码前等待 (ms)" },
+  "delayBeforeSave": { "message": "点击转存前等待 (ms)" },
+  "delayBeforeConfirm": { "message": "确认转存前等待 (ms)" },
+
+  "groupAppearance": { "message": "外观" },
+  "settingsTheme": { "message": "主题" },
+  "themeAuto": { "message": "跟随系统" },
+  "themeLight": { "message": "浅色" },
+  "themeDark": { "message": "深色" },
+
+  "groupLanguage": { "message": "语言" },
+  "settingsLocale": { "message": "界面语言" },
+  "localeAuto": { "message": "跟随浏览器" },
+  "localeZh": { "message": "中文" },
+  "localeEn": { "message": "English" },
+
+  "settingsSaved": { "message": "已保存" },
+  "settingsReset": { "message": "恢复默认" }
+}

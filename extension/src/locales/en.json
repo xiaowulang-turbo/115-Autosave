@@ -1,0 +1,50 @@
+{
+  "appName": {
+    "message": "115 Auto Save",
+    "description": "Extension name shown in the Chrome Web Store and extension manager"
+  },
+  "appDesc": {
+    "message": "One-click auto-save for 115 Cloud share pages: enter access code, save, confirm folder.",
+    "description": "Extension description"
+  },
+
+  "welcomeTitle": { "message": "Welcome to 115 Auto Save" },
+  "welcomeSubtitle": { "message": "Three clicks become one on every 115 share page." },
+  "welcomeIntro": { "message": "Open any 115 share link and the extension will submit the access code, trigger the save and confirm the target folder for you." },
+
+  "stepListTitle": { "message": "How it works" },
+  "step1Title": { "message": "Submit access code" },
+  "step1Desc": { "message": "Clicks the OK button to submit the access code right after the page loads." },
+  "step2Title": { "message": "Trigger save" },
+  "step2Desc": { "message": "Clicks the Save button to open the save dialog." },
+  "step3Title": { "message": "Confirm folder" },
+  "step3Desc": { "message": "Clicks the \"Save here\" button to finish the transfer." },
+
+  "openSettings": { "message": "Open settings" },
+  "openWebsite": { "message": "Visit website" },
+
+  "settingsTitle": { "message": "Settings" },
+  "settingsDesc": { "message": "Tweak behaviour, appearance and language." },
+
+  "groupBehavior": { "message": "Behaviour" },
+  "settingsEnabled": { "message": "Enable auto save" },
+  "settingsEnabledDesc": { "message": "When disabled, the extension will not click any buttons automatically." },
+  "delayBeforeSubmit": { "message": "Delay before submitting access code (ms)" },
+  "delayBeforeSave": { "message": "Delay before clicking Save (ms)" },
+  "delayBeforeConfirm": { "message": "Delay before confirming the folder (ms)" },
+
+  "groupAppearance": { "message": "Appearance" },
+  "settingsTheme": { "message": "Theme" },
+  "themeAuto": { "message": "Follow system" },
+  "themeLight": { "message": "Light" },
+  "themeDark": { "message": "Dark" },
+
+  "groupLanguage": { "message": "Language" },
+  "settingsLocale": { "message": "Interface language" },
+  "localeAuto": { "message": "Follow browser" },
+  "localeZh": { "message": "中文" },
+  "localeEn": { "message": "English" },
+
+  "settingsSaved": { "message": "Saved" },
+  "settingsReset": { "message": "Reset to defaults" }
+}
