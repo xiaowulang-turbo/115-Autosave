@@ -1,5 +1,5 @@
 # 流程文档（包含技术细节，不提交到仓库）
-WORKFLOW.md
+userscript/WORKFLOW.md
 
 # 系统文件
 .DS_Store
@@ -11,3 +11,21 @@ WORKFLOW.md
 # 临时文件
 *.tmp
 *.log
+
+# 依赖与构建产物
+node_modules/
+dist/
+.output/
+.wxt/
+.astro/
+
+# Vercel 本地链接信息（projectId 等不应入库）
+.vercel/
+
+# 环境变量
+.env
+.env.*
+!.env.example
+
+# 扩展商店上传产物（可由 pnpm zip 重新生成）
+extension.zip
