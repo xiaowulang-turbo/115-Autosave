@@ -14,8 +14,6 @@ import {
   type UiLocale,
 } from '@/utils/settings';
 
-type DelayField = 'delayBeforeSubmit' | 'delayBeforeSave' | 'delayBeforeConfirm';
-
 const settings = ref<Settings>({ ...DEFAULT_SETTINGS });
 const savedFlag = ref(false);
 let saveTimer: ReturnType<typeof setTimeout> | null = null;
@@ -50,6 +48,14 @@ const updateEnabled = (event: Event): void => {
   void persist({ enabled: (event.target as HTMLInputElement).checked });
 };
 
+const updateAutoSelectRecent = (event: Event): void => {
+  void persist({ autoSelectRecent: (event.target as HTMLInputElement).checked });
+};
+
+const updateAutoCloseSuccess = (event: Event): void => {
+  void persist({ autoCloseSuccess: (event.target as HTMLInputElement).checked });
+};
+
 const updateLocale = (next: UiLocale): void => {
   locale.value = next;
   void persist({ uiLocale: next });
@@ -60,10 +66,10 @@ const updateTheme = (next: ThemeMode): void => {
   void persist({ theme: next });
 };
 
-function onDelayInput(field: DelayField, raw: string): void {
+function onActionDelayInput(raw: string): void {
   const n = Number(raw);
   if (Number.isFinite(n) && n >= 0) {
-    void persist({ [field]: Math.round(n) } as Partial<Settings>);
+    void persist({ actionDelay: Math.round(n) });
   }
 }
 
@@ -105,38 +111,41 @@ const resetAll = (): void => {
       </label>
 
       <label class="row">
-        <span class="row-title">{{ t('delayBeforeSubmit') }}</span>
+        <div class="row-text">
+          <span class="row-title">{{ t('settingsActionDelay') }}</span>
+          <span class="row-desc">{{ t('settingsActionDelayDesc') }}</span>
+        </div>
         <input
           class="num"
           type="number"
           min="0"
           step="100"
-          :value="settings.delayBeforeSubmit"
-          @input="onDelayInput('delayBeforeSubmit', ($event.target as HTMLInputElement).value)"
+          :value="settings.actionDelay"
+          @input="onActionDelayInput(($event.target as HTMLInputElement).value)"
         >
       </label>
 
       <label class="row">
-        <span class="row-title">{{ t('delayBeforeSave') }}</span>
+        <div class="row-text">
+          <span class="row-title">{{ t('settingsAutoSelectRecent') }}</span>
+          <span class="row-desc">{{ t('settingsAutoSelectRecentDesc') }}</span>
+        </div>
         <input
-          class="num"
-          type="number"
-          min="0"
-          step="100"
-          :value="settings.delayBeforeSave"
-          @input="onDelayInput('delayBeforeSave', ($event.target as HTMLInputElement).value)"
+          :checked="settings.autoSelectRecent"
+          type="checkbox"
+          @change="updateAutoSelectRecent"
         >
       </label>
 
       <label class="row">
-        <span class="row-title">{{ t('delayBeforeConfirm') }}</span>
+        <div class="row-text">
+          <span class="row-title">{{ t('settingsAutoCloseSuccess') }}</span>
+          <span class="row-desc">{{ t('settingsAutoCloseSuccessDesc') }}</span>
+        </div>
         <input
-          class="num"
-          type="number"
-          min="0"
-          step="100"
-          :value="settings.delayBeforeConfirm"
-          @input="onDelayInput('delayBeforeConfirm', ($event.target as HTMLInputElement).value)"
+          :checked="settings.autoCloseSuccess"
+          type="checkbox"
+          @change="updateAutoCloseSuccess"
         >
       </label>
     </section>

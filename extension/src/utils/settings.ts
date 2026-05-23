@@ -3,18 +3,18 @@ export type UiLocale = 'auto' | 'zh_CN' | 'en';
 
 export interface Settings {
   enabled: boolean;
-  delayBeforeSubmit: number;
-  delayBeforeSave: number;
-  delayBeforeConfirm: number;
+  actionDelay: number;
+  autoSelectRecent: boolean;
+  autoCloseSuccess: boolean;
   theme: ThemeMode;
   uiLocale: UiLocale;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
   enabled: true,
-  delayBeforeSubmit: 500,
-  delayBeforeSave: 1000,
-  delayBeforeConfirm: 500,
+  actionDelay: 500,
+  autoSelectRecent: true,
+  autoCloseSuccess: true,
   theme: 'auto',
   uiLocale: 'auto',
 };
