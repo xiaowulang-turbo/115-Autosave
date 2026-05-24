@@ -55,3 +55,13 @@ extension/
 - `manifest.name` 与 `manifest.description` 使用 `__MSG_*__` 引用，Chrome Web Store 会按用户浏览器语言自动展示对应翻译
 - 需在商店后台准备中英两份"商品详情页"内容（标题/描述/截图）
 - 仅声明了 `storage` 权限和单一域名 `host_permissions`，过审难度低
+
+## 版本号约定
+
+扩展（`package.json` 的 `version`）与油猴脚本（`../userscript/115转存助手.user.js` 头部 `@version`）**保持同步**：每次发布时两端必须升到同一版本号。
+
+发布前 checklist：
+
+1. 同步修改 `extension/package.json` 与 `userscript/115转存助手.user.js` 的版本号
+2. 在 `extension/` 下执行 `pnpm zip` 生成 `.output/115-auto-save-extension-<version>-chrome.zip`
+3. 上传 Chrome Web Store + 同步更新 Greasy Fork 上的脚本
