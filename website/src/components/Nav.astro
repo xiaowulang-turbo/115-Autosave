@@ -4,22 +4,31 @@ import { GITHUB_URL } from '@/lib/constants';
 
 interface Props {
   dict: Dictionary;
+  /** 当前页面对应的首页路径，默认 '/'，英文页传 '/en/' */
+  home?: string;
 }
 
-const { dict } = Astro.props;
+const { dict, home = '/' } = Astro.props;
+
+// 判断当前是否就在首页：在首页用纯 hash（保留平滑滚动 & 不重写 URL），
+// 否则用绝对路径 + hash 跳回首页对应锚点。
+const currentPath = Astro.url.pathname.replace(/\/+$/, '/') || '/';
+const homePath = home.endsWith('/') ? home : `${home}/`;
+const isHome = currentPath === homePath;
+const hashHref = (hash: string) => (isHome ? `#${hash}` : `${homePath}#${hash}`);
 ---
 
 <header class="sticky top-0 z-50 border-b border-neutral-200/60 bg-white/80 backdrop-blur dark:border-neutral-800/60 dark:bg-neutral-950/80">
   <div class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
-    <a href="#top" class="flex items-center gap-2">
+    <a href={isHome ? '#top' : homePath} class="flex items-center gap-2">
       <img src="/icon-32.png" alt="" width="20" height="20" class="rounded" />
       <span class="text-sm font-semibold tracking-tight">{dict.brand}</span>
     </a>
 
     <nav class="hidden items-center gap-6 text-sm text-neutral-600 sm:flex dark:text-neutral-400">
-      <a href="#features" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.features}</a>
-      <a href="#install" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.install}</a>
-      <a href="#faq" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.faq}</a>
+      <a href={hashHref('features')} class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.features}</a>
+      <a href={hashHref('install')} class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.install}</a>
+      <a href={hashHref('faq')} class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.faq}</a>
       <a href={GITHUB_URL} target="_blank" rel="noopener" class="hover:text-neutral-900 dark:hover:text-neutral-100">{dict.nav.github}</a>
     </nav>
 
