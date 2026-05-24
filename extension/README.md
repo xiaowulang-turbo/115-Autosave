@@ -1,6 +1,6 @@
 # 115 Auto Save · Chrome Extension
 
-基于 [WXT](https://wxt.dev) + Vue 3 + TypeScript 构建的 Chrome MV3 浏览器扩展，将油猴脚本 [`../userscript/115转存助手.user.js`](../userscript/115%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B.user.js) 的"输入访问码 → 转存 → 确认目录"三步自动化逻辑迁移到正式扩展。
+基于 [WXT](https://wxt.dev) + Vue 3 + TypeScript 构建的 Chrome MV3 浏览器扩展，将油猴脚本 [`../userscript/115-auto-save.user.js`](../userscript/115-auto-save.user.js) 的"输入访问码 → 转存 → 确认目录"三步自动化逻辑迁移到正式扩展。
 
 > 已上架：[Chrome 应用商店 · 115 转存助手](https://chromewebstore.google.com/detail/115-%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B/akokmklnfgopbmlkpmjjligliekijfla)
 
@@ -58,10 +58,10 @@ extension/
 
 ## 版本号约定
 
-扩展（`package.json` 的 `version`）与油猴脚本（`../userscript/115转存助手.user.js` 头部 `@version`）**保持同步**：每次发布时两端必须升到同一版本号。
+扩展（`package.json` 的 `version`）与油猴脚本（`../userscript/115-auto-save.user.js` 头部 `@version`）**保持同步**：每次发布时两端必须升到同一版本号。
 
 发布前 checklist：
 
-1. 同步修改 `extension/package.json` 与 `userscript/115转存助手.user.js` 的版本号
+1. 同步修改 `extension/package.json` 与 `userscript/115-auto-save.user.js` 的版本号
 2. 在 `extension/` 下执行 `pnpm zip` 生成 `.output/115-auto-save-extension-<version>-chrome.zip`
 3. 上传 Chrome Web Store + 同步更新 Greasy Fork 上的脚本

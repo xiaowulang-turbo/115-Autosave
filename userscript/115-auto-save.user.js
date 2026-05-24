@@ -8,8 +8,8 @@
 // @match        https://115.com/*
 // @icon         https://115.com/favicon.ico
 // @homepageURL  https://115-auto-save.vercel.app
-// @supportURL   https://github.com/xiaowulang-Maoli/115-Autosave/issues
-// @source       https://github.com/xiaowulang-Maoli/115-Autosave
+// @supportURL   https://github.com/xiaowulang-turbo/115-Autosave/issues
+// @source       https://github.com/xiaowulang-turbo/115-Autosave
 // @grant        none
 // @run-at       document-idle
 // @license      MIT
