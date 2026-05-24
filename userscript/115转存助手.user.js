@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name         115转存助手 (115 Auto Save)
-// @namespace    http://tampermonkey.net/
+// @namespace    https://115-auto-save.vercel.app
 // @version      1.3.0
-// @description  115网盘分享页面自动转存，支持自动登录、验证码识别及最近接收文件夹选择。
+// @description  115网盘分享链接页面自动转存，支持自动登录和验证码识别。👉 官网 https://115-auto-save.vercel.app | Chrome 扩展版 https://chromewebstore.google.com/detail/akokmklnfgopbmlkpmjjligliekijfla
 // @author       Xiaowu
 // @match        https://115cdn.com/s/*
 // @match        https://115.com/*
 // @icon         https://115.com/favicon.ico
+// @homepageURL  https://115-auto-save.vercel.app
+// @supportURL   https://github.com/xiaowulang-Maoli/115-Autosave/issues
+// @source       https://github.com/xiaowulang-Maoli/115-Autosave
 // @grant        none
 // @run-at       document-idle
 // @license      MIT
