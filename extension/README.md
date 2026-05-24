@@ -2,6 +2,8 @@
 
 基于 [WXT](https://wxt.dev) + Vue 3 + TypeScript 构建的 Chrome MV3 浏览器扩展，将油猴脚本 [`../userscript/115转存助手.user.js`](../userscript/115%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B.user.js) 的"输入访问码 → 转存 → 确认目录"三步自动化逻辑迁移到正式扩展。
 
+> 已上架：[Chrome 应用商店 · 115 转存助手](https://chromewebstore.google.com/detail/115-%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B/akokmklnfgopbmlkpmjjligliekijfla)
+
 ## 功能
 
 - 内容脚本：在 `https://115cdn.com/s/*` 自动完成三步点击

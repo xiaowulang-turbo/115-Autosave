@@ -13,7 +13,7 @@
 ## 三种使用方式
 
 - **油猴脚本**：访问 [Greasy Fork 页面](https://greasyfork.org/zh-CN/scripts/558227-115%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B-115-auto-save) 一键安装，详见 [`userscript/README.md`](./userscript/README.md)
-- **Chrome 扩展**：商店链接发布后补充（含中英国际化、主题、欢迎页、设置页）
+- **Chrome 扩展**：访问 [Chrome 应用商店](https://chromewebstore.google.com/detail/115-%E8%BD%AC%E5%AD%98%E5%8A%A9%E6%89%8B/akokmklnfgopbmlkpmjjligliekijfla) 一键添加（含中英国际化、主题、欢迎页、设置页）
 - **官网**：[https://115-auto-save.vercel.app](https://115-auto-save.vercel.app)（Vercel 部署）
 
 ## 本地开发
