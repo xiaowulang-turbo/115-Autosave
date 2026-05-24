@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         115转存助手 (115 Auto Save)
 // @namespace    https://115-auto-save.vercel.app
-// @version      1.3.0
+// @version      1.3.1
 // @description  115网盘分享链接页面自动转存，支持自动登录和验证码识别。👉 官网 https://115-auto-save.vercel.app | Chrome 扩展版 https://chromewebstore.google.com/detail/akokmklnfgopbmlkpmjjligliekijfla
 // @author       Xiaowu
 // @match        https://115cdn.com/s/*

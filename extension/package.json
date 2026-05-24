@@ -2,7 +2,7 @@
   "name": "115-auto-save-extension",
   "description": "115 网盘分享页自动转存的 Chrome 扩展",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.1",
   "type": "module",
   "scripts": {
     "dev": "wxt",
